@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <title>Thymeleaf index</title>
+</head>
+<body>
+<div class="login-box">
+    <a sec:authorize="isAnonymous()" class="sign" th:href="@{/user/loginForm}">로그인</a>
+    <a sec:authorize="isAnonymous()" class="sign" th:href="@{/user/register}">회원가입</a>
+    <span sec:authorize="isAuthenticated()" class="mx-3" th:text="${user} + '님 안녕하세요!'"></span>
+    <a sec:authorize="isAuthenticated()" class="sign" th:href="@{/post/logout}">로그아웃</a>
+</div>
+
+<div th:if="${post != null}">
+    <h1>Post Title: <span th:text="${post.title}">Post Title</span></h1>
+    <h2>Post Content: <span th:text="${post.content}">Post Content</span></h2>
+    <p>Entry Date: <span th:text="${post.entry_date}">Entry Date</span></p>
+    <p>Last Modified: <span th:text="${post.modify_date}">Modify Date</span></p>
+    <p>Nickname: <span th:text="${post.nickname} ?: 'No nickname available'">Nickname</span></p>
+</div>
+
+</body>
+</html>

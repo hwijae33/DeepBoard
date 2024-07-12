@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>기본 에러 페이지</title>
+</head>
+<body>
+<div>
+    <h1>Error 403: Forbidden</h1>
+    <p th:text="${error}"></p>
+</div>
+
+<a href="javascript:history.back();">이전 페이지로 이동</a>
+
+<!--<div>-->
+<!--    status상태 코드-->
+<!--    status : <span th:text="${status}"></span>-->
+<!--</div>-->
+<!--<div>-->
+<!--    path예외가 발생한 URL 경로-->
+<!--    path : <span th:text="${path}"></span>-->
+<!--</div>-->
+<!--<div>-->
+<!--    error에러 발생 원인-->
+<!--    error : <span th:text="${error}"></span>-->
+<!--</div>-->
+<!--<div>-->
+<!--    timestamp에러 발생 시간-->
+<!--    timestamp : <span th:text="${timestamp}"></span>-->
+<!--</div>-->
+<!--<div>-->
+<!--    message예외 발생시 전달한 메시지-->
+<!--    message : <span th:text="${message}"></span>-->
+<!--</div>-->
+<!--<div>-->
+<!--    exception예외 처리 클래스 명-->
+<!--    exception : <span th:text="${exception}"></span>-->
+<!--</div>-->
+<!--<div>-->
+<!--    trace예외 발생 stack trace-->
+<!--    trace : <span th:text="${trace}"></span>-->
+<!--</div>-->
+
+</body>
+</html>
