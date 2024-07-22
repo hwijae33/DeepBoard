@@ -26,7 +26,7 @@ public class HomeController {
     private final PostServiceImpl postService;
 
     @GetMapping("/")
-    public String index(Model model, @PageableDefault(page = 0, size = 10, direction = Sort.Direction.DESC) Pageable pageable,@AuthenticationPrincipal UserPrincipalDetails users) {
+    public String index(Model model, @PageableDefault(page = 0, size = 15, direction = Sort.Direction.DESC) Pageable pageable,@AuthenticationPrincipal UserPrincipalDetails users) {
         // Retrieve page of posts
         Page<ListDTO> posts = postService.getAllPosts(pageable);
 

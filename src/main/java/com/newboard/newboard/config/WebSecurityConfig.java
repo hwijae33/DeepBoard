@@ -61,10 +61,6 @@ public class WebSecurityConfig {
         return http.build();
     }
 
-
-
-
-
 //WebSecurityCustomizer를 사용하여 특정 요청 경로들을 Security 필터 체인 적용 대상에서 제외시킵니다.
     @Bean
     public WebSecurityCustomizer webSecurityCustomizer() {
